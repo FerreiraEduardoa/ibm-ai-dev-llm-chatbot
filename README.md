@@ -1,4 +1,7 @@
 # Eduardo Chat — Simple Local Chatbot (Flask + Transformers)
+## 🚀 Live Demo
+👉 Hugging Face Space: https://huggingface.co/spaces/Eduardoferreiraquimico/ibm-ai-dev-llm-chatbot
+
 
 A **simple local chatbot web app** built with **Flask + JavaScript** and powered by the open-source model **`Qwen/Qwen2.5-0.5B-Instruct`** (Hugging Face).  
 Created as a **final project / course wrap-up** for the **IBM AI Developer** module about **building chatbots and integrating an LLM into a web interface**.
