@@ -1,0 +1,14 @@
+# venv
+my_env/
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+
+# secrets
+.env
+
+# misc
+.DS_Store

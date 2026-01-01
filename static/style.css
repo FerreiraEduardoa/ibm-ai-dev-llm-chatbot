@@ -1,0 +1,213 @@
+/* =========================
+   Modern Gray Chat UI Theme
+   ========================= */
+
+   :root{
+    --bg: #0f1115;
+    --panel: #151822;
+    --panel-2: #191d29;
+    --border: rgba(255,255,255,.08);
+  
+    --text: rgba(255,255,255,.92);
+    --muted: rgba(255,255,255,.62);
+  
+    --shadow: 0 12px 28px rgba(0,0,0,.35);
+    --radius: 18px;
+  
+    --maxw: 980px;
+  }
+  
+  *{ box-sizing: border-box; }
+  html, body{ height: 100%; }
+  
+  body{
+    margin: 0;
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  
+    background:
+      radial-gradient(900px 450px at 25% 10%, rgba(255,255,255,.06), transparent 55%),
+      radial-gradient(700px 380px at 80% 20%, rgba(255,255,255,.04), transparent 60%),
+      var(--bg);
+  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* App container */
+  .app{
+    width: min(var(--maxw), calc(100% - 24px));
+    margin: 24px 12px;
+  }
+  
+  /* Top bar */
+  .topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+  }
+  
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+  
+    background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+    border: 1px solid var(--border);
+  }
+  
+  .brand-text{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .brand-title{
+    font-weight: 700;
+    letter-spacing: .2px;
+  }
+  
+  .brand-subtitle{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  
+  .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(180, 255, 205, .9);
+    box-shadow: 0 0 0 3px rgba(180,255,205,.12);
+  }
+  
+  /* Main panel */
+  .panel{
+    margin-top: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  
+    /* Force layout: messages grow and composer stays visible */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Messages area */
+  .messages{
+    flex: 1;
+    min-height: 420px;
+    max-height: 62vh;
+    overflow: auto;
+    padding: 16px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .msg{ display: flex; }
+  .msg-user{ justify-content: flex-end; }
+  .msg-bot{ justify-content: flex-start; }
+  
+  .bubble{
+    max-width: 78%;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 12px 12px;
+    background: var(--panel);
+  }
+  
+  .msg-user .bubble{
+    background: var(--panel-2);
+  }
+  
+  .meta{
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  
+  .text{
+    white-space: pre-wrap;
+    line-height: 1.35;
+  }
+  
+  /* Composer */
+  .composer{
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    border-top: 1px solid var(--border);
+    background: rgba(0,0,0,.15);
+  }
+  
+  .input{
+    flex: 1;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,.25);
+    color: var(--text);
+    padding: 12px 12px;
+    outline: none;
+  }
+  
+  .input:focus{
+    border-color: rgba(255,255,255,.18);
+  }
+  
+  .btn{
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+    cursor: pointer;
+    color: var(--text);
+    background: rgba(255,255,255,.04);
+  }
+  
+  .btn:hover{ background: rgba(255,255,255,.06); }
+  
+  .btn-primary{
+    border-color: rgba(255,255,255,.14);
+    background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  }
+  
+  .btn-ghost{ background: transparent; }
+  
+  .footer{
+    padding: 10px 12px 12px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,.05);
+    background: rgba(0,0,0,.08);
+  }
+  
+  kbd{
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.10);
+    padding: 2px 6px;
+    border-radius: 8px;
+    color: var(--text);
+  }
+  

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eduardo Chat</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">E</div>
+
+        <div class="brand-text">
+          <div class="brand-title">Eduardo Chat</div>
+          <div class="brand-subtitle">
+            <span class="dot"></span>
+            <span id="statusText">Online</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-ghost" id="btnClear" type="button">Limpar</button>
+      </div>
+    </header>
+
+    <main class="panel">
+      <section class="messages" id="messages" aria-live="polite">
+        <div class="msg msg-bot">
+          <div class="bubble">
+            <div class="meta">Bot</div>
+            <div class="text">Olá! 👋 Me diga como posso te ajudar hoje.</div>
+          </div>
+        </div>
+      </section>
+
+      <form class="composer" id="chatForm" autocomplete="off">
+        <input
+          id="prompt"
+          class="input"
+          type="text"
+          placeholder="Digite sua mensagem..."
+          aria-label="Digite sua mensagem"
+        />
+        <button id="btnSend" class="btn btn-primary" type="submit">
+          Enviar
+        </button>
+      </form>
+
+      <footer class="footer">
+        <span>Dica:</span> pressione <kbd>Enter</kbd> para enviar
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
